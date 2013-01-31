@@ -6,9 +6,20 @@
 //  Copyright (c) 2013 wyq. All rights reserved.
 //
 
-#import "KFCMasterViewController.h"
+//#define kCLIENTID "AIQF31DJE4AOG4TEORSJX1QJFQHMQKMNT5UO5M5DPS0KTB4W"
+//#define kCLIENTSECRET "WFJY4HK4DXMDAZDX3PGUMBYOIKYSJVRFJYLONPGMZRSKIQQG"
+//#define kBASE_URL @"https://api.Foursquare.com/v2"
+//#define kRESOURCE_PATH @"/venues/search"
 
+
+#define kBASE_URL @"http://ax.phobos.apple.com.edgesuite.net"
+#define kRESOURCE_PATH @"/WebObjects/MZStore.woa/wpa/MRSS/newreleases/limit=100/rss.xml"
+
+#import "KFCMasterViewController.h"
 #import "KFCDetailViewController.h"
+#import <RestKit/RestKit.h>
+
+#import "Song.h"
 
 @interface KFCMasterViewController () {
     NSMutableArray *_objects;
@@ -30,6 +41,30 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    RKURL *baseUrl = [RKURL URLWithString:kBASE_URL];
+    RKObjectManager *manager = [RKObjectManager managerWithBaseURL:baseUrl];
+    
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[Song class]];
+    
+    [mapping mapAttributes:@"title", @"link", @"description", @"category", nil];
+    [mapping mapKeyPath:@"artist" toAttribute:@"itms:artist"];
+    [mapping mapKeyPath:@"albumPrice" toAttribute:@"itms:albumPrice"];
+    
+    [manager.mappingProvider setMapping:mapping forKeyPath:@"rss.channel.item"];
+    manager.serializationMIMEType = RKMIMETypeXML;
+    
+    [self sendRequest];
+    
+}
+
+-(void)sendRequest
+{
+    RKObjectManager *manager = [RKObjectManager sharedManager];
+    
+    RKURL *url = [RKURL URLWithBaseURLString:kBASE_URL resourcePath:kRESOURCE_PATH];
+    
+    [manager loadObjectsAtResourcePath:[url resourcePath] delegate:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -109,5 +144,27 @@
         [[segue destinationViewController] setDetailItem:object];
     }
 }
+
+#pragma make - RKObjectLoaderDelegate
+
+/**
+ * Sent when an object loaded failed to load the collection due to an error
+ */
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+{
+    NSLog(@"error: %@\n", [error description]);
+}
+
+/**
+ When implemented, sent to the delegate when the object laoder has completed successfully
+ and loaded a collection of objects. All objects mapped from the remote payload will be returned
+ as a single array.
+ */
+- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
+{
+    _objects = [NSMutableArray arrayWithArray:objects];
+    
+}
+
 
 @end

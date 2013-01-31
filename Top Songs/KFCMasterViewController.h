@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RestKit/RKObjectLoader.h>
 
-@interface KFCMasterViewController : UITableViewController
+@interface KFCMasterViewController : UITableViewController<RKObjectLoaderDelegate>
 
 @end

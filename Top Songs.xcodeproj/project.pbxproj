@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80DDD8B216BA1B4300BDA88E /* KFCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DDD8B116BA1B4300BDA88E /* KFCMainViewController.m */; };
+		80DDD8B416BA1B5500BDA88E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80DDD8B316BA1B5500BDA88E /* MainStoryboard.storyboard */; };
 		80FF13F816B3D9D80012BD6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FF13F716B3D9D80012BD6D /* UIKit.framework */; };
 		80FF13FA16B3D9D80012BD6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FF13F916B3D9D80012BD6D /* Foundation.framework */; };
 		80FF13FC16B3D9D80012BD6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FF13FB16B3D9D80012BD6D /* CoreGraphics.framework */; };
@@ -16,12 +18,66 @@
 		80FF140A16B3D9D80012BD6D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 80FF140916B3D9D80012BD6D /* Default.png */; };
 		80FF140C16B3D9D80012BD6D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80FF140B16B3D9D80012BD6D /* Default@2x.png */; };
 		80FF140E16B3D9D80012BD6D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80FF140D16B3D9D80012BD6D /* Default-568h@2x.png */; };
-		80FF141116B3D9D80012BD6D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80FF140F16B3D9D80012BD6D /* MainStoryboard.storyboard */; };
-		80FF141416B3D9D80012BD6D /* KFCMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FF141316B3D9D80012BD6D /* KFCMasterViewController.m */; };
-		80FF141716B3D9D80012BD6D /* KFCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FF141616B3D9D80012BD6D /* KFCDetailViewController.m */; };
+		80FF143416B3FE3D0012BD6D /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FF142916B3FD7B0012BD6D /* libRestKit.a */; };
+		80FF143616B3FE540012BD6D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FF143516B3FE540012BD6D /* CFNetwork.framework */; };
+		80FF143816B3FE5B0012BD6D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FF143716B3FE5B0012BD6D /* CoreData.framework */; };
+		80FF143A16B3FE620012BD6D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FF143916B3FE620012BD6D /* MobileCoreServices.framework */; };
+		80FF143C16B3FE690012BD6D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FF143B16B3FE690012BD6D /* Security.framework */; };
+		80FF143E16B3FE710012BD6D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FF143D16B3FE710012BD6D /* SystemConfiguration.framework */; };
+		80FF144016B3FE780012BD6D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FF143F16B3FE780012BD6D /* QuartzCore.framework */; };
+		80FF144216B3FE800012BD6D /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FF144116B3FE800012BD6D /* libxml2.dylib */; };
+		80FF144516B400140012BD6D /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FF144416B400140012BD6D /* Song.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		80FF142816B3FD7B0012BD6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80FF141D16B3FD7B0012BD6D /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D1614564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		80FF142A16B3FD7B0012BD6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80FF141D16B3FD7B0012BD6D /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D2614564E820060A5C5;
+			remoteInfo = RestKitTests;
+		};
+		80FF142C16B3FD7B0012BD6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80FF141D16B3FD7B0012BD6D /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E62145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		80FF142E16B3FD7B0012BD6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80FF141D16B3FD7B0012BD6D /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E78145651060060A5C5;
+			remoteInfo = RestKitFrameworkTests;
+		};
+		80FF143016B3FD7B0012BD6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80FF141D16B3FD7B0012BD6D /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 259C301615128079003066A2;
+			remoteInfo = RestKitResources;
+		};
+		80FF143216B3FE0F0012BD6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80FF141D16B3FD7B0012BD6D /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25160D1514564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		80DDD8B016BA1B4300BDA88E /* KFCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFCMainViewController.h; sourceTree = "<group>"; };
+		80DDD8B116BA1B4300BDA88E /* KFCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFCMainViewController.m; sourceTree = "<group>"; };
+		80DDD8B316BA1B5500BDA88E /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		80FF13F316B3D9D80012BD6D /* Top Songs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Top Songs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FF13F716B3D9D80012BD6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		80FF13F916B3D9D80012BD6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -35,11 +91,16 @@
 		80FF140916B3D9D80012BD6D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		80FF140B16B3D9D80012BD6D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		80FF140D16B3D9D80012BD6D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		80FF141016B3D9D80012BD6D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		80FF141216B3D9D80012BD6D /* KFCMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KFCMasterViewController.h; sourceTree = "<group>"; };
-		80FF141316B3D9D80012BD6D /* KFCMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KFCMasterViewController.m; sourceTree = "<group>"; };
-		80FF141516B3D9D80012BD6D /* KFCDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KFCDetailViewController.h; sourceTree = "<group>"; };
-		80FF141616B3D9D80012BD6D /* KFCDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KFCDetailViewController.m; sourceTree = "<group>"; };
+		80FF141D16B3FD7B0012BD6D /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = "RestKit-0.10.3/RestKit.xcodeproj"; sourceTree = "<group>"; };
+		80FF143516B3FE540012BD6D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		80FF143716B3FE5B0012BD6D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		80FF143916B3FE620012BD6D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		80FF143B16B3FE690012BD6D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		80FF143D16B3FE710012BD6D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		80FF143F16B3FE780012BD6D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		80FF144116B3FE800012BD6D /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		80FF144316B400140012BD6D /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		80FF144416B400140012BD6D /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +108,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80FF144216B3FE800012BD6D /* libxml2.dylib in Frameworks */,
+				80FF144016B3FE780012BD6D /* QuartzCore.framework in Frameworks */,
+				80FF143E16B3FE710012BD6D /* SystemConfiguration.framework in Frameworks */,
+				80FF143C16B3FE690012BD6D /* Security.framework in Frameworks */,
+				80FF143A16B3FE620012BD6D /* MobileCoreServices.framework in Frameworks */,
+				80FF143816B3FE5B0012BD6D /* CoreData.framework in Frameworks */,
+				80FF143616B3FE540012BD6D /* CFNetwork.framework in Frameworks */,
+				80FF143416B3FE3D0012BD6D /* libRestKit.a in Frameworks */,
 				80FF13F816B3D9D80012BD6D /* UIKit.framework in Frameworks */,
 				80FF13FA16B3D9D80012BD6D /* Foundation.framework in Frameworks */,
 				80FF13FC16B3D9D80012BD6D /* CoreGraphics.framework in Frameworks */,
@@ -76,6 +145,14 @@
 		80FF13F616B3D9D80012BD6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				80FF141D16B3FD7B0012BD6D /* RestKit.xcodeproj */,
+				80FF144116B3FE800012BD6D /* libxml2.dylib */,
+				80FF143F16B3FE780012BD6D /* QuartzCore.framework */,
+				80FF143D16B3FE710012BD6D /* SystemConfiguration.framework */,
+				80FF143B16B3FE690012BD6D /* Security.framework */,
+				80FF143916B3FE620012BD6D /* MobileCoreServices.framework */,
+				80FF143716B3FE5B0012BD6D /* CoreData.framework */,
+				80FF143516B3FE540012BD6D /* CFNetwork.framework */,
 				80FF13F716B3D9D80012BD6D /* UIKit.framework */,
 				80FF13F916B3D9D80012BD6D /* Foundation.framework */,
 				80FF13FB16B3D9D80012BD6D /* CoreGraphics.framework */,
@@ -88,12 +165,12 @@
 			children = (
 				80FF140616B3D9D80012BD6D /* KFCAppDelegate.h */,
 				80FF140716B3D9D80012BD6D /* KFCAppDelegate.m */,
-				80FF140F16B3D9D80012BD6D /* MainStoryboard.storyboard */,
-				80FF141216B3D9D80012BD6D /* KFCMasterViewController.h */,
-				80FF141316B3D9D80012BD6D /* KFCMasterViewController.m */,
-				80FF141516B3D9D80012BD6D /* KFCDetailViewController.h */,
-				80FF141616B3D9D80012BD6D /* KFCDetailViewController.m */,
 				80FF13FE16B3D9D80012BD6D /* Supporting Files */,
+				80FF144316B400140012BD6D /* Song.h */,
+				80FF144416B400140012BD6D /* Song.m */,
+				80DDD8B016BA1B4300BDA88E /* KFCMainViewController.h */,
+				80DDD8B116BA1B4300BDA88E /* KFCMainViewController.m */,
+				80DDD8B316BA1B5500BDA88E /* MainStoryboard.storyboard */,
 			);
 			path = "Top Songs";
 			sourceTree = "<group>";
@@ -112,6 +189,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		80FF141E16B3FD7B0012BD6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80FF142916B3FD7B0012BD6D /* libRestKit.a */,
+				80FF142B16B3FD7B0012BD6D /* RestKitTests.octest */,
+				80FF142D16B3FD7B0012BD6D /* RestKit.framework */,
+				80FF142F16B3FD7B0012BD6D /* RestKitFrameworkTests.octest */,
+				80FF143116B3FD7B0012BD6D /* RestKitResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,6 +215,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				80FF143316B3FE0F0012BD6D /* PBXTargetDependency */,
 			);
 			name = "Top Songs";
 			productName = "Top Songs";
@@ -152,12 +242,56 @@
 			mainGroup = 80FF13E816B3D9D80012BD6D;
 			productRefGroup = 80FF13F416B3D9D80012BD6D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 80FF141E16B3FD7B0012BD6D /* Products */;
+					ProjectRef = 80FF141D16B3FD7B0012BD6D /* RestKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				80FF13F216B3D9D80012BD6D /* Top Songs */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		80FF142916B3FD7B0012BD6D /* libRestKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKit.a;
+			remoteRef = 80FF142816B3FD7B0012BD6D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80FF142B16B3FD7B0012BD6D /* RestKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitTests.octest;
+			remoteRef = 80FF142A16B3FD7B0012BD6D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80FF142D16B3FD7B0012BD6D /* RestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RestKit.framework;
+			remoteRef = 80FF142C16B3FD7B0012BD6D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80FF142F16B3FD7B0012BD6D /* RestKitFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitFrameworkTests.octest;
+			remoteRef = 80FF142E16B3FD7B0012BD6D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80FF143116B3FD7B0012BD6D /* RestKitResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitResources.bundle;
+			remoteRef = 80FF143016B3FD7B0012BD6D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		80FF13F116B3D9D80012BD6D /* Resources */ = {
@@ -168,7 +302,7 @@
 				80FF140A16B3D9D80012BD6D /* Default.png in Resources */,
 				80FF140C16B3D9D80012BD6D /* Default@2x.png in Resources */,
 				80FF140E16B3D9D80012BD6D /* Default-568h@2x.png in Resources */,
-				80FF141116B3D9D80012BD6D /* MainStoryboard.storyboard in Resources */,
+				80DDD8B416BA1B5500BDA88E /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,12 +315,20 @@
 			files = (
 				80FF140416B3D9D80012BD6D /* main.m in Sources */,
 				80FF140816B3D9D80012BD6D /* KFCAppDelegate.m in Sources */,
-				80FF141416B3D9D80012BD6D /* KFCMasterViewController.m in Sources */,
-				80FF141716B3D9D80012BD6D /* KFCDetailViewController.m in Sources */,
+				80FF144516B400140012BD6D /* Song.m in Sources */,
+				80DDD8B216BA1B4300BDA88E /* KFCMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80FF143316B3FE0F0012BD6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = 80FF143216B3FE0F0012BD6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		80FF140016B3D9D80012BD6D /* InfoPlist.strings */ = {
@@ -195,14 +337,6 @@
 				80FF140116B3D9D80012BD6D /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		80FF140F16B3D9D80012BD6D /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				80FF141016B3D9D80012BD6D /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -230,6 +364,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -251,6 +386,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
@@ -264,6 +400,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Top Songs/Top Songs-Prefix.pch";
 				INFOPLIST_FILE = "Top Songs/Top Songs-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -275,6 +415,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Top Songs/Top Songs-Prefix.pch";
 				INFOPLIST_FILE = "Top Songs/Top Songs-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -299,6 +443,7 @@
 				80FF141C16B3D9D80012BD6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

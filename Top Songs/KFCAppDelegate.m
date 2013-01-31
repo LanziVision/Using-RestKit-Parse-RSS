@@ -7,6 +7,7 @@
 //
 
 #import "KFCAppDelegate.h"
+#import <RestKit/RestKit.h>
 
 @implementation KFCAppDelegate
 
