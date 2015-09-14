@@ -92,6 +92,20 @@ button and confirm that your "Build Location" is the "Derived Data Location".
 1. Import the RestKit headers via `#import <RestKit/RestKit.h>`
 1. Build the project to verify installation is successful.
 
+RestKit installation guide using CocoaPods
+1. Install CocoaPods if needed. `"https://guides.cocoapods.org/using/getting-started.html"`
+1. Open terminal to the root directory of your project
+1. Type in the following commands
+    1. `pod init`
+    1. `open -a Xcode Podfile`
+        1. Change `# platform :ios, 'XX.XX'` to desired iOS version.
+        1. Add `pod 'RestKit', '~>0.20.0'` after `target 'YourProjectName' do`
+        1. Save and close Podfile
+    1. `pod install`
+1. Open project using `YourProjectName.xcworkspace`
+1. Import the RestKit headers via `#import <RestKit/RestKit.h>`
+1. Build the project to verify installation is successful.
+
 Visual Install Guide
 -------------------------
 
